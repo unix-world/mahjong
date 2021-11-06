@@ -1,0 +1,420 @@
+/*
+Copyright 2014, Daniel Beck and Karin Beck
+
+This file is part of Green Mahjong.
+
+Green Mahjong is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Green Mahjong is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Green Mahjong.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*
+Groß:
+===
+Aussen: 100x80
+Innen: 95x75
+
+Klein:
+=====
+Aussen:60x48
+Innen:57x45*/
+
+body {
+	font-size: 16px;
+}
+
+/*#game {
+	width: 1130px;
+	height: 780px;
+}*/
+
+#cards {
+	width: 1130px;
+	height: 780px;
+	/*height: 400px;*/
+}
+#cards[data-layout=flower] {
+	width: 820px;
+	height: 770px;
+	/*height: 400px;*/
+}
+
+#cards[data-layout=spider] {
+	width: 1050px;
+	height: 770px;
+}
+
+#cards[data-layout=cloud] {
+	width: 1020px;
+	height: 620px;
+}
+
+#cards[data-layout=fourHills] {
+	height: 850px;
+	width: 940px;
+}
+
+
+.card {
+	filter: grayscale(20%) !important;
+	border-radius: 5px;
+	height: 100px;
+	width: 80px;
+	border: 1px solid rgba(175,175,175,0.55);
+	box-shadow: 1px 1px 0px rgba(175,175,175,0.25),
+				2px 2px 0px rgba(175,175,175,0.25),
+				3px 3px 0px rgba(175,175,175,0.25);
+}
+
+body.hint-on .card {
+	border: 1px solid #777777;
+}
+
+div.game-buttons  ul li{
+	width:70px;
+	padding: 0 0 0 16px;
+}
+
+div.game-buttons ul li img{
+	width: 48px;
+	height:48px;
+}
+.shadow {
+}
+
+#gameScene{
+	/*position: absolute;*/
+	top:35px;
+	left:102px;
+	/*left:62px;*/
+}
+
+.cardZahl1 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man1.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl2 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl3 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man3.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl4 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man4.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl5 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man5.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl6 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man6.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl7 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man7.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl8 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man8.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardZahl9 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man9.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardBambus1 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou1.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus2 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus3 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou3.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus4 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou4.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus5 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou5.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus6 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou6.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus7 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou7.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus8 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou8.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardBambus9 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou9.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardMuenze1 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin1.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze2 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze3 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin3.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze4 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin4.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze5 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin5.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze6 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin6.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze7 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin7.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze8 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin8.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardMuenze9 {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin9.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardNordwind {
+	background-color: #111111;
+	background-image: url("../svg/Black/Nan.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardSuedwind {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pei.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardOstwind {
+	background-color: #111111;
+	background-image: url("../svg/Black/Shaa.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardWestwind {
+	background-color: #111111;
+	background-image: url("../svg/Black/Ton.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardFruehling {
+	background-color: #111111;
+	background-image: url("../svg/Black/Nan2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardSommer {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pei2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardHerbst {
+	background-color: #111111;
+	background-image: url("../svg/Black/Shaa2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardWinter {
+	background-color: #111111;
+	background-image: url("../svg/Black/Ton2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardBambus {
+	background-color: #111111;
+	background-image: url("../svg/Black/Chun.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardPflaume {
+	background-color: #111111;
+	background-image: url("../svg/Black/Chun2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardOrchidee {
+	background-color: #111111;
+	background-image: url("../svg/Black/Hatsu.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardChrysantheme {
+	background-color: #111111;
+	background-image: url("../svg/Black/Hatsu2.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+.cardDracheGruen {
+	background-color: #111111;
+	background-image: url("../svg/Black/Man5-Dora.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardDracheRot {
+	background-color: #111111;
+	background-image: url("../svg/Black/Sou5-Dora.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+.cardDracheWeiss {
+	background-color: #111111;
+	background-image: url("../svg/Black/Pin5-Dora.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 90px;
+}
+
+
+
+
+.image {
+	/*border-radius: 15px;*/
+	height: 47px;
+	width: 50px;
+	border: none;
+	/*background: transparent url('../images/mahjong_bigscreen.png');*/
+	background-color: transparent;
+	background-image:  url('../images/application_icons.png');
+}
+
+
+.menu {background-position: 0 0}
+.undo {background-position: -150px 0}
+.new {background-position: -200px 0}
+.hint {background-position: -250px 0}
+.theme {background-position: -300px 0}
